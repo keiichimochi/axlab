@@ -111,10 +111,13 @@ export const XIcon: React.FC<IconProps> = (props) => (
 );
 
 export const TikTokIcon: React.FC<IconProps> = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12a4 4 0 11-4-4 4 4 0 014 4z" />
-    <path strokeLinecap="round" strokeLinejoin="round" d="M21 5a6 6 0 01-6 6V9a2 2 0 002-2h4z" />
-    <path strokeLinecap="round" strokeLinejoin="round" d="M15 11v8a4 4 0 11-4-4" />
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>
+    <circle cx="12" cy="12" r="9.5"/>
+    <g transform="translate(0,0)">
+      <path d="M13 6.2v7.5c0 2-1.6 3.6-3.6 3.6S5.8 15.7 5.8 13.6 7.4 10 9.4 10c.6 0 1.1.1 1.6.3" />
+      <path d="M13 7.7c1.1 1.3 2.8 2.1 4.6 2.1" />
+      <circle cx="9.4" cy="16.4" r="2.5" />
+    </g>
   </svg>
 );
 
@@ -146,5 +149,35 @@ export const LineIcon: React.FC<IconProps> = (props) => (
       <path d="M13 14v-3l2 3v-3"/>       {/* N */}
       <path d="M19 11h-2v3h2m-2-1.5h1.5"/> {/* E */}
     </g>
+  </svg>
+);
+
+// AI Agent page specific icons
+export const AnalyticsIcon: React.FC<IconProps> = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+  </svg>
+);
+
+export const LightningIcon: React.FC<IconProps> = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+  </svg>
+);
+
+export const ArrowLeftIcon: React.FC<IconProps> = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+  </svg>
+);
+
+export const WebsiteIcon: React.FC<IconProps> = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h12A2.25 2.25 0 0120.25 6v12A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18V6z" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 9h16.5" />
+    <circle cx="7.5" cy="6.75" r="0.75" fill="currentColor" />
+    <circle cx="9.75" cy="6.75" r="0.75" fill="currentColor" />
+    <circle cx="12" cy="6.75" r="0.75" fill="currentColor" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 12h7.5M8.25 15h4.5" />
   </svg>
 );

@@ -1,7 +1,11 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { ServiceCard } from './components/ServiceCard';
 import { BottomNavItem } from './components/BottomNavItem';
+import AIAgentPage from './components/AIAgentPage';
+import LineBotPage from './components/LineBotPage';
+import DashboardPage from './components/DashboardPage';
+import WebCreationPage from './components/WebCreationPage';
 import {
   BrainCircuitIcon,
   ChartBarIcon,
@@ -18,12 +22,30 @@ import {
   WorkflowIcon,
   InstagramIcon,
   XIcon,
-  TikTokIcon,
   LineIcon,
   RobotIcon,
+  WebsiteIcon,
 } from './components/icons';
 
 const App: React.FC = () => {
+  const [currentPage, setCurrentPage] = useState<'home' | 'ai-agent' | 'line-bot' | 'dashboard' | 'web-creation'>('home');
+
+  if (currentPage === 'ai-agent') {
+    return <AIAgentPage onBack={() => setCurrentPage('home')} />;
+  }
+
+  if (currentPage === 'line-bot') {
+    return <LineBotPage onBack={() => setCurrentPage('home')} />;
+  }
+
+  if (currentPage === 'dashboard') {
+    return <DashboardPage onBack={() => setCurrentPage('home')} />;
+  }
+
+  if (currentPage === 'web-creation') {
+    return <WebCreationPage onBack={() => setCurrentPage('home')} />;
+  }
+
   return (
     <div className="bg-[#F0F2F5] min-h-screen flex justify-center items-center">
       <div className="w-full max-w-sm mx-auto bg-[#F0F2F5] rounded-3xl shadow-lg overflow-hidden font-sans">
@@ -45,21 +67,25 @@ const App: React.FC = () => {
               icon={<RobotIcon className="h-10 w-10 text-[#2d5a53]" />}
               title="AI Agent"
               subtitle=""
+              onClick={() => setCurrentPage('ai-agent')}
             />
             <ServiceCard
               icon={<LineIcon className="h-8 w-8 text-[#2d5a53]" />}
               title="LINE Bot"
               subtitle=""
+              onClick={() => setCurrentPage('line-bot')}
             />
             <ServiceCard
               icon={<ChartBarIcon className="h-8 w-8 text-[#2d5a53]" />}
-              title="Dashboard"
+              title="Dashboard & Workflow"
               subtitle=""
+              onClick={() => setCurrentPage('dashboard')}
             />
             <ServiceCard
-              icon={<WorkflowIcon className="h-8 w-8 text-[#2d5a53]" />}
-              title="Workflow"
-              subtitle=""
+              icon={<WebsiteIcon className="h-8 w-8 text-[#2d5a53]" />}
+              title="Web制作"
+              description="次世代のWebサイト制作"
+              onClick={() => setCurrentPage('web-creation')}
             />
           </main>
 
@@ -84,9 +110,10 @@ const App: React.FC = () => {
             <button className="p-3 rounded-full shadow-[3px_3px_6px_#d9dde3,_-3px_-3px_6px_#ffffff] active:shadow-inner-[3px_3px_6px_#d9dde3,_-3px_-3px_6px_#ffffff] transition-shadow duration-200">
               <XIcon className="h-5 w-5 text-[#2d5a53]" />
             </button>
-            <button className="p-3 rounded-full shadow-[3px_3px_6px_#d9dde3,_-3px_-3px_6px_#ffffff] active:shadow-inner-[3px_3px_6px_#d9dde3,_-3px_-3px_6px_#ffffff] transition-shadow duration-200">
+            {/* TikTok button temporarily hidden */}
+            {/* <button className="p-3 rounded-full shadow-[3px_3px_6px_#d9dde3,_-3px_-3px_6px_#ffffff] active:shadow-inner-[3px_3px_6px_#d9dde3,_-3px_-3px_6px_#ffffff] transition-shadow duration-200">
               <TikTokIcon className="h-5 w-5 text-[#2d5a53]" />
-            </button>
+            </button> */}
             <button className="p-3 rounded-full shadow-[3px_3px_6px_#d9dde3,_-3px_-3px_6px_#ffffff] active:shadow-inner-[3px_3px_6px_#d9dde3,_-3px_-3px_6px_#ffffff] transition-shadow duration-200">
               <LineIcon className="h-6 w-6 text-[#2d5a53]" />
             </button>
