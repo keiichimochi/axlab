@@ -13,6 +13,14 @@ import {
   UserIcon,
   MenuIcon,
   SearchIcon,
+  LineBotIcon,
+  RadioIcon,
+  WorkflowIcon,
+  InstagramIcon,
+  XIcon,
+  TikTokIcon,
+  LineIcon,
+  RobotIcon,
 } from './components/icons';
 
 const App: React.FC = () => {
@@ -34,37 +42,54 @@ const App: React.FC = () => {
           {/* Service Grid */}
           <main className="grid grid-cols-2 gap-6 mb-10">
             <ServiceCard
-              icon={<BrainCircuitIcon className="h-8 w-8 text-[#2d5a53]" />}
-              title="Data"
-              subtitle="Analysis"
+              icon={<RobotIcon className="h-10 w-10 text-[#2d5a53]" />}
+              title="AI Agent"
+              subtitle=""
+            />
+            <ServiceCard
+              icon={<LineIcon className="h-8 w-8 text-[#2d5a53]" />}
+              title="LINE Bot"
+              subtitle=""
             />
             <ServiceCard
               icon={<ChartBarIcon className="h-8 w-8 text-[#2d5a53]" />}
-              title="Predictive"
-              subtitle="Analytics"
+              title="Dashboard"
+              subtitle=""
             />
             <ServiceCard
-              icon={<PersonalizationIcon className="h-8 w-8 text-[#2d5a53]" />}
-              title="Personalization"
-              subtitle="AI"
-            />
-            <ServiceCard
-              icon={<CartAiIcon className="h-8 w-8 text-[#2d5a53]" />}
-              title="E-Commerce"
-              subtitle="AI"
+              icon={<WorkflowIcon className="h-8 w-8 text-[#2d5a53]" />}
+              title="Workflow"
+              subtitle=""
             />
           </main>
 
           {/* Search Bar */}
           <div className="relative mb-12">
-            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-              <SearchIcon className="h-5 w-5 text-gray-400" />
+            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none gap-2">
+              <RobotIcon className="h-7 w-7 text-gray-400" />
+              <span className="text-gray-400 text-sm">Ask Our AI</span>
             </div>
             <input
               type="text"
-              placeholder="Ask our AI........"
-              className="w-full bg-[#F0F2F5] text-gray-700 placeholder-gray-400 rounded-full py-3 pl-11 pr-4 focus:outline-none shadow-inner-[5px_5px_10px_#d9dde3,_-5px_-5px_10px_#ffffff] focus:ring-2 focus:ring-[#2d5a53]/50 transition-shadow duration-200"
+              placeholder=""
+              className="w-full bg-[#F0F2F5] text-gray-700 placeholder-gray-400 rounded-full py-3 pl-24 pr-4 focus:outline-none shadow-inner-[5px_5px_10px_#d9dde3,_-5px_-5px_10px_#ffffff] focus:ring-2 focus:ring-[#2d5a53]/50 transition-shadow duration-200"
             />
+          </div>
+
+          {/* Social Media Icons */}
+          <div className="flex justify-center items-center gap-6 mb-6">
+            <button className="p-3 rounded-full shadow-[3px_3px_6px_#d9dde3,_-3px_-3px_6px_#ffffff] active:shadow-inner-[3px_3px_6px_#d9dde3,_-3px_-3px_6px_#ffffff] transition-shadow duration-200">
+              <InstagramIcon className="h-5 w-5 text-[#2d5a53]" />
+            </button>
+            <button className="p-3 rounded-full shadow-[3px_3px_6px_#d9dde3,_-3px_-3px_6px_#ffffff] active:shadow-inner-[3px_3px_6px_#d9dde3,_-3px_-3px_6px_#ffffff] transition-shadow duration-200">
+              <XIcon className="h-5 w-5 text-[#2d5a53]" />
+            </button>
+            <button className="p-3 rounded-full shadow-[3px_3px_6px_#d9dde3,_-3px_-3px_6px_#ffffff] active:shadow-inner-[3px_3px_6px_#d9dde3,_-3px_-3px_6px_#ffffff] transition-shadow duration-200">
+              <TikTokIcon className="h-5 w-5 text-[#2d5a53]" />
+            </button>
+            <button className="p-3 rounded-full shadow-[3px_3px_6px_#d9dde3,_-3px_-3px_6px_#ffffff] active:shadow-inner-[3px_3px_6px_#d9dde3,_-3px_-3px_6px_#ffffff] transition-shadow duration-200">
+              <LineIcon className="h-6 w-6 text-[#2d5a53]" />
+            </button>
           </div>
 
           {/* Bottom Navigation */}

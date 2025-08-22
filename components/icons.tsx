@@ -71,3 +71,80 @@ export const SearchIcon: React.FC<IconProps> = (props) => (
     <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
   </svg>
 );
+
+// LINE Bot Icon
+export const LineBotIcon: React.FC<IconProps> = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+  </svg>
+);
+
+// Radio Icon
+export const RadioIcon: React.FC<IconProps> = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 7.5l16.5-4.125M12 6.75c-2.708 0-5.25.854-7.5 2.25v8.25a3 3 0 003 3h9a3 3 0 003-3V9c-2.25-1.396-4.792-2.25-7.5-2.25z" />
+    <circle cx="12" cy="13.5" r="1.5" />
+  </svg>
+);
+
+// Workflow Icon
+export const WorkflowIcon: React.FC<IconProps> = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 7.125h3M10.5 16.875h3" />
+  </svg>
+);
+
+// Social Media Icons
+export const InstagramIcon: React.FC<IconProps> = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+  </svg>
+);
+
+export const XIcon: React.FC<IconProps> = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
+
+export const TikTokIcon: React.FC<IconProps> = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12a4 4 0 11-4-4 4 4 0 014 4z" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M21 5a6 6 0 01-6 6V9a2 2 0 002-2h4z" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M15 11v8a4 4 0 11-4-4" />
+  </svg>
+);
+
+export const RobotIcon: React.FC<IconProps> = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.2} strokeLinecap="round" strokeLinejoin="round" {...props}>
+    {/* antenna */}
+    <circle cx="12" cy="4.3" r="1"/>
+    <path d="M12 5v2.7"/>
+    {/* head */}
+    <path d="M6 8.2c-.5 0-1 .5-1 1v7c0 .5.5 1 1 1h12c.5 0 1-.5 1-1v-7c0-.5-.5-1-1-1H6z"/>
+    {/* ears */}
+    <path d="M3 12.2h2M19 11.8h2"/>
+    {/* eyes like ハ */}
+    <path d="M8.5 12.5l1 1.5M9.5 12.5l-1 1.5"/>
+    <path d="M14.5 12.5l1 1.5M15.5 12.5l-1 1.5"/>
+    {/* smile */}
+    <path d="M10.2 15.6c.9.7 2.4.7 3.2-.2"/>
+  </svg>
+);
+
+export const LineIcon: React.FC<IconProps> = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.2} strokeLinecap="round" strokeLinejoin="round" {...props}>
+    {/* bubble */}
+    <path d="M12 5h4a6 6 0 0 1 6 6 8 8 0 0 1-8 8h-1l-3.5 2 .9-2H8a6 6 0 0 1-6-6v-2a6 6 0 0 1 6-6h4z"/>
+    {/* L I N E letters shifted slightly right */}
+    <g transform="translate(-1,0)">
+      <path d="M7.5 11v3h2"/>             {/* L */}
+      <path d="M11 11v3"/>               {/* I */}
+      <path d="M13 14v-3l2 3v-3"/>       {/* N */}
+      <path d="M19 11h-2v3h2m-2-1.5h1.5"/> {/* E */}
+    </g>
+  </svg>
+);
