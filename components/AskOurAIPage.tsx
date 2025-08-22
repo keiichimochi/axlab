@@ -36,8 +36,13 @@ const AskOurAIPage: React.FC<AskOurAIPageProps> = ({ onBack }) => {
 
   const callGeminiAPI = async (message: string): Promise<string> => {
     try {
-      const apiKey = process.env.GEMINI_API_KEY;
+      const apiKey = process.env.GEMINI_API_KEY || process.env.API_KEY;
       if (!apiKey) {
+        console.error('Environment variables:', {
+          GEMINI_API_KEY: process.env.GEMINI_API_KEY,
+          API_KEY: process.env.API_KEY,
+          NODE_ENV: process.env.NODE_ENV
+        });
         throw new Error('APIキーが設定されていません');
       }
 
