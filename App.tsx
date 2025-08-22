@@ -82,7 +82,7 @@ const App: React.FC = () => {
             />
             <ServiceCard
               icon={<ChartBarIcon className="h-8 w-8 text-[#2d5a53]" />}
-              title="Dashboard & Workflow"
+              title="AI受付"
               subtitle=""
               onClick={() => setCurrentPage('dashboard')}
             />
