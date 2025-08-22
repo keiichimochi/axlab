@@ -6,6 +6,7 @@ import AIAgentPage from './components/AIAgentPage';
 import LineBotPage from './components/LineBotPage';
 import DashboardPage from './components/DashboardPage';
 import WebCreationPage from './components/WebCreationPage';
+import AskOurAIPage from './components/AskOurAIPage';
 import {
   BrainCircuitIcon,
   ChartBarIcon,
@@ -28,7 +29,7 @@ import {
 } from './components/icons';
 
 const App: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<'home' | 'ai-agent' | 'line-bot' | 'dashboard' | 'web-creation'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'ai-agent' | 'line-bot' | 'dashboard' | 'web-creation' | 'ask-our-ai'>('home');
 
   if (currentPage === 'ai-agent') {
     return <AIAgentPage onBack={() => setCurrentPage('home')} />;
@@ -44,6 +45,10 @@ const App: React.FC = () => {
 
   if (currentPage === 'web-creation') {
     return <WebCreationPage onBack={() => setCurrentPage('home')} />;
+  }
+
+  if (currentPage === 'ask-our-ai') {
+    return <AskOurAIPage onBack={() => setCurrentPage('home')} />;
   }
 
   return (
@@ -90,7 +95,7 @@ const App: React.FC = () => {
           </main>
 
           {/* Search Bar */}
-          <div className="relative mb-12">
+          <div className="relative mb-12 cursor-pointer" onClick={() => setCurrentPage('ask-our-ai')}>
             <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none gap-2">
               <RobotIcon className="h-7 w-7 text-gray-400" />
               <span className="text-gray-400 text-sm">Ask Our AI</span>
@@ -98,7 +103,8 @@ const App: React.FC = () => {
             <input
               type="text"
               placeholder=""
-              className="w-full bg-[#F0F2F5] text-gray-700 placeholder-gray-400 rounded-full py-3 pl-24 pr-4 focus:outline-none shadow-inner-[5px_5px_10px_#d9dde3,_-5px_-5px_10px_#ffffff] focus:ring-2 focus:ring-[#2d5a53]/50 transition-shadow duration-200"
+              className="w-full bg-[#F0F2F5] text-gray-700 placeholder-gray-400 rounded-full py-3 pl-24 pr-4 focus:outline-none shadow-inner-[5px_5px_10px_#d9dde3,_-5px_-5px_10px_#ffffff] focus:ring-2 focus:ring-[#2d5a53]/50 transition-shadow duration-200 cursor-pointer"
+              readOnly
             />
           </div>
 
